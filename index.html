@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="my">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>💰 Daily Finance Pro — VIP Version</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>💰 Daily Finance Pro</h1>
+
+    <div class="input-panel">
+      <select id="type">
+        <option value="income">ဝင်ငွေ</option>
+        <option value="expense">ထွက်ငွေ</option>
+      </select>
+      <input type="text" id="category" placeholder="အမျိုးအစား (ဥပမာ အစားအသောက်)" />
+      <input type="number" id="amount" placeholder="ပမာဏ (Ks)" />
+      <input type="text" id="note" placeholder="မှတ်စု (optional)" />
+      <button id="addBtn">ထည့်မည်</button>
+    </div>
+
+    <div class="summary">
+      <div>💵 ဝင်ငွေ: <span id="totalIncome">0</span> Ks</div>
+      <div>💸 ထွက်ငွေ: <span id="totalExpense">0</span> Ks</div>
+      <div>🧾 ကျန်ငွေ: <span id="balance">0</span> Ks</div>
+    </div>
+
+    <div class="chart-container">
+      <canvas id="financeChart"></canvas>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>နေ့စွဲ</th>
+          <th>အမျိုးအစား</th>
+          <th>ပမာဏ</th>
+          <th>မှတ်စု</th>
+          <th>ဖျက်မည်</th>
+        </tr>
+      </thead>
+      <tbody id="recordTable"></tbody>
+    </table>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
